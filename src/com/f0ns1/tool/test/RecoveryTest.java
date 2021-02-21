@@ -17,7 +17,7 @@ public class RecoveryTest {
 
 	public static void main(String[] args) {
 		System.out.println("Rcovery Test: ");
-		File privKey = new File("/tmp/keys/rsa_test.key");
+		File privKey = new File(args[2]);
 		DataInputStream dis;
 		try {
 			dis = new DataInputStream(new FileInputStream("/tmp/keys/rsa_test.key"));
@@ -27,7 +27,7 @@ public class RecoveryTest {
 			KeyFactory keyFactory = KeyFactory.getInstance("RSA");
 			PKCS8EncodedKeySpec privSpec = new PKCS8EncodedKeySpec(privKeyBytes);
 			PrivateKey privKeyData = (PrivateKey) keyFactory.generatePrivate(privSpec);
-			String[] argv = { "/tmp/ransomTest/", "/tmp/recovery/",
+			String[] argv = { args[0], args[1],
 					Base64.getEncoder().encodeToString(privKeyData.getEncoded()) };
 			Recovery recovery = new Recovery();
 			recovery.main(argv);
