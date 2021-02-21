@@ -8,6 +8,7 @@ public class EncryptAlg {
 	private String key;
 
 	public EncryptAlg(String key) {
+		System.out.println("Encryption key: "+key);
 		this.key = key;
 	}
 

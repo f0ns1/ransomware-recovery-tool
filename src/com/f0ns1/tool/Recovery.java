@@ -22,6 +22,9 @@ public class Recovery {
 			recoveryDir = args[1];
 			key = args[2];
 		}
+		System.out.println("dir: " +dir);
+		System.out.println("recoveryDir: "+recoveryDir);
+		System.out.println("key : "+key);
 		List<String> list = listFilesForFolder(new File(dir));
 		EncryptAlg enc = new EncryptAlg(key);
 		for (String file : list) {
