@@ -33,7 +33,6 @@ public class RecoveryTest {
 			recovery.main(argv);
 
 		} catch (IOException | NoSuchAlgorithmException | InvalidKeySpecException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
