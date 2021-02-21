@@ -9,7 +9,7 @@ import java.util.List;
 public class Recovery {
 
 	public static void main(String[] args) {
-		System.out.println("Recovery tool ");
+		System.out.println("Recovery tool: ");
 		String key;
 		String dir;
 		String recoveryDir;
@@ -34,6 +34,8 @@ public class Recovery {
 		}
 
 	}
+
+	
 
 	private static String getName(String file) {
 		String[] data = file.split("/");
